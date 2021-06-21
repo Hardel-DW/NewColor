@@ -15,7 +15,7 @@
       <Private>false</Private>
     </Reference>
 
-		<Reference Include="$(AmongUs)\BepInEx\plugins\HardelAPI.dll" />
+		<Reference Include="$(AmongUs)\BepInEx\plugins\Harion.dll" />
 	</ItemGroup>
   
 	<ItemGroup>
