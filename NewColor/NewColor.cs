@@ -8,8 +8,6 @@ using System.Linq;
 using System.Collections.Generic;
 using Harion;
 using Harion.Utility.Helper;
-using Harion.ModsManagers.Configuration;
-using Harion.ModsManagers.Mods;
 using Harion.ColorDesigner;
 using Harion.HatDesigner;
 
@@ -18,25 +16,11 @@ namespace NewColor {
     [BepInPlugin(Id)]
     [BepInProcess("Among Us.exe")]
     [BepInDependency(HarionPlugin.Id)]
-    public class NewColor : BasePlugin, IModManager, IModManagerLink {
+    public class NewColor : BasePlugin {
         public const string Id = "fr.evan.newcolor";
         public static ManualLogSource Logger;
 
         public Harmony Harmony { get; } = new Harmony(Id);
-
-        public string DisplayName => "New Color";
-
-        public string Version => typeof(NewColor).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
-
-        public string SmallDescription => "Add skin and hat";
-
-        public string Description => "This mod uses Harion and adds various new colors and hats to the game.";
-
-        public string Credit => "Evan & Hardel";
-
-        public Dictionary<string, Sprite> ModsLinks => new Dictionary<string, Sprite>() {
-            { "https://github.com/Evan91380/NewColor", ModsSocial.GithubSprite }
-        };
 
         public override void Load() {
             Logger = Log;
