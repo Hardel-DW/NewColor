@@ -90,6 +90,12 @@ namespace NewColor {
                 shadow = new Color32(31, 128, 91, byte.MaxValue),
                 isLighterColor = true
             });
+            ColorCreator.AddColor(new CustomColor {
+                name = "Red",
+                color = new Color32(61, 255, 181, byte.MaxValue),
+                shadow = new Color32(31, 128, 91, byte.MaxValue),
+                isLighterColor = true
+            });
         }
 
         private void AddHat() {
